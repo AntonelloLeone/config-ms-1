@@ -9,7 +9,7 @@ spring:
       mvc:
         routes:
           - id: user-service
-            uri: lb://localhost:8081
+            uri: lb://user-service
             predicates:
               - Path=/users/**
 

@@ -1,6 +1,9 @@
 logging:
   level:
     root: INFO
+    org.springframework.cloud.gateway: DEBUG
+    org.springframework.cloud.loadbalancer: DEBUG
+    com.netflix.discovery: DEBUG
 
 custom:
   env: DEV
