@@ -3,13 +3,16 @@ spring:
     name: gateway-service
 
 
+
   cloud:
     gateway:
-      routes:
-        - id: user-service
-          uri: lb://USER-SERVICE
-          predicates:
-            - Path=/users/**
+      mvc:
+        routes:
+          - id: user-service
+            uri: lb://USER-SERVICE
+            predicates:
+              - Path=/users/**
+
 
 server:
   port: ${SERVER_PORT:8080}
