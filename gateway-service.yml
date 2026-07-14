@@ -6,12 +6,13 @@ spring:
 
   cloud:
     gateway:
-      mvc:
-        routes:
-          - id: user-service
-            uri: lb://user-service
-            predicates:
-              - Path=/users/**
+      server:
+        webmvc:
+          routes:
+            - id: user-service
+              uri: lb://user-service
+              predicates:
+                - Path=/users/**
 
 
 server:
